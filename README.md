@@ -1,0 +1,1 @@
+# arashi-shopify-theme
