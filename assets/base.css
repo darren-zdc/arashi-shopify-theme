@@ -3611,9 +3611,9 @@ details-disclosure > details {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-image: url('data:image/svg+xml;utf8,<svg...>'); /* Dropdown arrow icon */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
   background-repeat: no-repeat;
-  background-position: right 10px top 50%, 0 0;
+  background-position: right 15px center;
   background-size: 12px;
   width: 100%;
   box-sizing: border-box;
@@ -3630,6 +3630,7 @@ details-disclosure > details {
 
 .vehicle-filter-form input[type="submit"] {
   transition: transform 0.1s ease;
+  margin: 0 auto 1rem;
   display: block;
   text-align: left;
 }
