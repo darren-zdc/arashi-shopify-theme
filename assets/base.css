@@ -3603,6 +3603,23 @@ details-disclosure > details {
 }
 
 .vehicle-filter-form select {
+  height: 44px; /* Adjust this based on your theme's standard */
+  padding: 0.5rem;
+  font-size: 1.5rem; /* Match this with the theme's font size */
+  border: 1px solid #ddd; /* Adjust the border color to match theme */
+  border-radius: 0.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg...>'); /* Dropdown arrow icon */
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%, 0 0;
+  background-size: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.vehicle-filter-form select {
   display: block;
   margin: 0 auto 1rem;
   padding: 0.5rem;
