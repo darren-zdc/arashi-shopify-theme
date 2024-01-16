@@ -1,11 +1,47 @@
 <div class="vehicle-filter-form">
-    <form action="/search" method="get" id="vehicle-filter-form">
-        <select name="type" id="type">
-            <option value="">Select Type</option>
-            <!-- Add options for type -->
-            <!-- ... -->
-        </select>
-        <!-- Repeat for Make, Model, Year -->
-        <input type="submit" value="Show all parts">
-    </form>
+  <form action="/search" method="get"  id="vehicle-filter-form">
+    <!-- Access vehicle metafields -->
+    {% assign vehicles = shop.metaobjects.vehicle %}
+
+    <!-- Create Make dropdown -->
+    <label for="make">Make:</label>
+    <select name="make" id="make">
+      {% for vehicle in vehicles.values %}
+        <option value="{{ make }}">{{ vehicle.make }}</option>
+      {% endfor %}
+    </select>
+
+    <!-- Create Model dropdown -->
+    <label for="model">Model:</label>
+    <select name="model" id="model">
+      {% for vehicle in vehicles.values %}
+        <option value="{{ model }}">{{ vehicle.model }}</option>
+      {% endfor %}
+    </select>
+
+    <!-- Create Year dropdown -->
+    <label for="year">Year:</label>
+    <select name="year" id="year">
+      {% for vehicle in vehicles.values %}
+        <option value="{{ year }}">{{ vehicle.year }}</option>
+      {% endfor %}
+    </select>
+
+    <!-- Create Model Number dropdown -->
+    <label for="model_number">Model Number:</label>
+    <select name="model_number" id="model_number">
+      {% for vehicle in vehicles.values %}
+        <option value="{{ modelNumber }}">{{ vehicle.model_number }}</option>
+      {% endfor %}
+    </select>
+
+    <!-- Create Type dropdown -->
+    <label for="type">Type:</label>
+    <select name="type" id="type">
+      {% for type in vehicleMeta.type %}
+        <option value="{{ type }}">{{ type }}</option>
+      {% endfor %}
+    </select>
+    <input type="submit" value="Show all parts">
+  </form>
 </div>
