@@ -7,113 +7,10 @@
         "padding_bottom": 28
       }
     },
-    "rich_text_7qmtjH": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_BgkjHM": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
-          }
-        },
-        "text_tBUfJV": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
-          }
-        },
-        "button_d63UY3": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_BgkjHM",
-        "text_tBUfJV",
-        "button_d63UY3"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "collapsible_content_JNcx4n": {
-      "type": "collapsible-content",
-      "blocks": {
-        "collapsible_row_W9Y7cB": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "<p>adsf<\/p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_LGJKjb": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_rLEnEw": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_dc4cDm": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_W9Y7cB",
-        "collapsible_row_LGJKjb",
-        "collapsible_row_rLEnEw",
-        "collapsible_row_dc4cDm"
-      ],
-      "settings": {
-        "caption": "",
-        "heading": "Collapsible content",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "layout": "none",
-        "color_scheme": "",
-        "container_color_scheme": "",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "custom_liquid_e7YRhz": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<!-- Access vehicle metafields -->\n{% assign vehicleMeta = shop.metaobjects.vehicle.cb-600-hornet %}\n\n<p>Make: {{ vehicleMeta.make.value }} <\/p>\n\n<!-- Create Make dropdown -->\n<label for=\"make\">Make:<\/label>\n<select name=\"make\" id=\"make\">\n  {% for make in vehicleMeta.make %}\n    <option value=\"{{ make }}\">{{ make }}<\/option>\n  {% endfor %}\n<\/select>\n\n<!-- Create Model dropdown -->\n<label for=\"model\">Model:<\/label>\n<select name=\"model\" id=\"model\">\n  {% for model in vehicleMeta.model %}\n    <option value=\"{{ model }}\">{{ model }}<\/option>\n  {% endfor %}\n<\/select>\n\n<!-- Create Year dropdown -->\n<label for=\"year\">Year:<\/label>\n<select name=\"year\" id=\"year\">\n  {% for year in vehicleMeta.year %}\n    <option value=\"{{ year }}\">{{ year }}<\/option>\n  {% endfor %}\n<\/select>\n\n<!-- Create Model Number dropdown -->\n<label for=\"model_number\">Model Number:<\/label>\n<select name=\"model_number\" id=\"model_number\">\n  {% for modelNumber in vehicleMeta.model_number %}\n    <option value=\"{{ modelNumber }}\">{{ modelNumber }}<\/option>\n  {% endfor %}\n<\/select>\n\n<!-- Create Type dropdown -->\n<label for=\"type\">Type:<\/label>\n<select name=\"type\" id=\"type\">\n  {% for type in vehicleMeta.type %}\n    <option value=\"{{ type }}\">{{ type }}<\/option>\n  {% endfor %}\n<\/select>",
+        "custom_liquid": "<!-- Access vehicle metafields -->\n{% assign vehicles = shop.metaobjects.vehicle %}\n\n{% assign vehicles = shop.metaobjects.vehicle %}\n{% for vehicle in vehicles .values%}\n  <p>Make: {{ vehicle.model.value }}<\/p>\n{% endfor %}\n\n\n<!-- Create Make dropdown -->\n<label for=\"make\">Make:<\/label>\n<select name=\"make\" id=\"make\">\n  {% for vehicle in vehicles.values %}\n    <option value=\"{{ make }}\">{{ vehicle.make }}<\/option>\n  {% endfor %}\n<\/select>\n\n<!-- Create Model dropdown -->\n<label for=\"model\">Model:<\/label>\n<select name=\"model\" id=\"model\">\n  {% for vehicle in vehicles.values %}\n    <option value=\"{{ model }}\">{{ vehicle.model }}<\/option>\n  {% endfor %}\n<\/select>\n\n<!-- Create Year dropdown -->\n<label for=\"year\">Year:<\/label>\n<select name=\"year\" id=\"year\">\n  {% for vehicle in vehicles.values %}\n    <option value=\"{{ year }}\">{{ vehicle.year }}<\/option>\n  {% endfor %}\n<\/select>\n\n<!-- Create Model Number dropdown -->\n<label for=\"model_number\">Model Number:<\/label>\n<select name=\"model_number\" id=\"model_number\">\n  {% for vehicle in vehicles.values %}\n    <option value=\"{{ modelNumber }}\">{{ vehicle.model_number }}<\/option>\n  {% endfor %}\n<\/select>\n\n<!-- Create Type dropdown -->\n<label for=\"type\">Type:<\/label>\n<select name=\"type\" id=\"type\">\n  {% for type in vehicleMeta.type %}\n    <option value=\"{{ type }}\">{{ type }}<\/option>\n  {% endfor %}\n<\/select>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
@@ -122,8 +19,6 @@
   },
   "order": [
     "main",
-    "rich_text_7qmtjH",
-    "collapsible_content_JNcx4n",
     "custom_liquid_e7YRhz"
   ]
 }
