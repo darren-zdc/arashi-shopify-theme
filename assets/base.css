@@ -3621,7 +3621,7 @@ details-disclosure > details {
 
 .vehicle-filter-form select {
   display: block;
-  margin: 0 auto 1rem;
+  margin: 0 auto 0.75rem;
   padding: 0.5rem;
   width: 100%;
   border: 1px solid #ddd;
@@ -3630,7 +3630,6 @@ details-disclosure > details {
 
 .vehicle-filter-form input[type="submit"] {
   transition: transform 0.1s ease;
-  margin: 0 auto 1rem;
   display: block;
   text-align: left;
 }
