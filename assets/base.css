@@ -3613,11 +3613,11 @@ details-disclosure > details {
 }
 
 .vehicle-filter-form input[type="submit"] {
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
 }
 
 .vehicle-filter-form input[type="submit"]:hover {
-    transform: scale(1.03); /* Slightly increase the size */
+    transform: scale(1.01); /* Slightly increase the size */
 }
 
 @media (max-width: 768px) {
