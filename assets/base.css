@@ -3599,7 +3599,7 @@ details-disclosure > details {
   display: block;
   text-align: left;
   margin-bottom: 0.5rem;
-  font-size: 1rem; /* Adjust as needed */
+  font-size: 2rem; /* Adjust as needed */
 }
 
 .vehicle-filter-form select,
