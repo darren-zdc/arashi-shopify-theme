@@ -3612,7 +3612,9 @@ details-disclosure > details {
 }
 
 .vehicle-filter-form input[type="submit"] {
-    transition: transform 0.2s ease;
+  transition: transform 0.1s ease;
+  display: block;
+  text-align: left;
 }
 
 .vehicle-filter-form input[type="submit"]:hover {
