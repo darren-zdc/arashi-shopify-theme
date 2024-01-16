@@ -3,19 +3,19 @@
     <!-- Access vehicle metafields -->
     {% assign vehicles = shop.metaobjects.vehicle %}
 
+    <!-- Create Type dropdown -->
+    <label for="type">Type:</label>
+    <select name="type" id="type">
+      {% for type in vehicleMeta.type %}
+        <option value="{{ type }}">{{ type }}</option>
+      {% endfor %}
+    </select>
+    
     <!-- Create Make dropdown -->
     <label for="make">Make:</label>
     <select name="make" id="make">
       {% for vehicle in vehicles.values %}
         <option value="{{ make }}">{{ vehicle.make }}</option>
-      {% endfor %}
-    </select>
-
-    <!-- Create Model dropdown -->
-    <label for="model">Model:</label>
-    <select name="model" id="model">
-      {% for vehicle in vehicles.values %}
-        <option value="{{ model }}">{{ vehicle.model }}</option>
       {% endfor %}
     </select>
 
@@ -27,21 +27,14 @@
       {% endfor %}
     </select>
 
-    <!-- Create Model Number dropdown -->
-    <label for="model_number">Model Number:</label>
-    <select name="model_number" id="model_number">
+    <!-- Create Model dropdown -->
+    <label for="model">Model:</label>
+    <select name="model" id="model">
       {% for vehicle in vehicles.values %}
-        <option value="{{ modelNumber }}">{{ vehicle.model_number }}</option>
+        <option value="{{ model }}">{{ vehicle.model }}</option>
       {% endfor %}
     </select>
 
-    <!-- Create Type dropdown -->
-    <label for="type">Type:</label>
-    <select name="type" id="type">
-      {% for type in vehicleMeta.type %}
-        <option value="{{ type }}">{{ type }}</option>
-      {% endfor %}
-    </select>
     <input class="button button-primary" type="submit" value="Show all parts">
   </form>
 </div>
