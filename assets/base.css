@@ -3602,8 +3602,7 @@ details-disclosure > details {
   font-size: 2rem; /* Adjust as needed */
 }
 
-.vehicle-filter-form select,
-.vehicle-filter-form input[type="submit"] {
+.vehicle-filter-form select {
   display: block;
   margin: 0 auto 1rem;
   padding: 0.5rem;
