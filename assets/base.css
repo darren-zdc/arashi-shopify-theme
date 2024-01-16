@@ -3537,3 +3537,10 @@ details-disclosure > details {
 .vehicle-filter-form input[type="submit"]:hover {
     background-color: #555;
 }
+
+@media (max-width: 768px) {
+    .vehicle-filter-form select, .vehicle-filter-form input[type="submit"] {
+        width: 100%;
+        padding: 0.4rem;
+    }
+}
