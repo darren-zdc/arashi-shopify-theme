@@ -113,7 +113,7 @@
     "custom_liquid_e7YRhz": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "",
+        "custom_liquid": "<!-- Access vehicle metafields -->\n{% assign vehicleMeta = shop.metaobjects.vehicle.cb-600-hornet %}\n\n<p>Make: {{ vehicleMeta.make.value }} <\/p>\n\n<!-- Create Make dropdown -->\n<label for=\"make\">Make:<\/label>\n<select name=\"make\" id=\"make\">\n  {% for make in vehicleMeta.make %}\n    <option value=\"{{ make }}\">{{ make }}<\/option>\n  {% endfor %}\n<\/select>\n\n<!-- Create Model dropdown -->\n<label for=\"model\">Model:<\/label>\n<select name=\"model\" id=\"model\">\n  {% for model in vehicleMeta.model %}\n    <option value=\"{{ model }}\">{{ model }}<\/option>\n  {% endfor %}\n<\/select>\n\n<!-- Create Year dropdown -->\n<label for=\"year\">Year:<\/label>\n<select name=\"year\" id=\"year\">\n  {% for year in vehicleMeta.year %}\n    <option value=\"{{ year }}\">{{ year }}<\/option>\n  {% endfor %}\n<\/select>\n\n<!-- Create Model Number dropdown -->\n<label for=\"model_number\">Model Number:<\/label>\n<select name=\"model_number\" id=\"model_number\">\n  {% for modelNumber in vehicleMeta.model_number %}\n    <option value=\"{{ modelNumber }}\">{{ modelNumber }}<\/option>\n  {% endfor %}\n<\/select>\n\n<!-- Create Type dropdown -->\n<label for=\"type\">Type:<\/label>\n<select name=\"type\" id=\"type\">\n  {% for type in vehicleMeta.type %}\n    <option value=\"{{ type }}\">{{ type }}<\/option>\n  {% endfor %}\n<\/select>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
