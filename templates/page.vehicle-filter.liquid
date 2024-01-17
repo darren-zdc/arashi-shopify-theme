@@ -28,20 +28,18 @@
       {% endfor %}
     </select>
 
-    <!-- Create Year dropdown -->
+    <!-- Year Dropdown -->
     <label for="year">Year:</label>
-    <select name="year" id="year">
-      {% for vehicle in vehicles.values %}
-        <option value="{{ vehicle.year }}">{{ vehicle.year }}</option>
-      {% endfor %}
+    <select name="year" id="year" disabled>
+      <option value="">Select Year</option>
+      <!-- Options will be added dynamically -->
     </select>
 
-    <!-- Create Model dropdown -->
+    <!-- Model Dropdown -->
     <label for="model">Model:</label>
-    <select name="model" id="model">
-      {% for vehicle in vehicles.values %}
-        <option value="{{ vehicle.model }}">{{ vehicle.model }}</option>
-      {% endfor %}
+    <select name="model" id="model" disabled>
+      <option value="">Select Model</option>
+      <!-- Options will be added dynamically -->
     </select>
 
     <input class="button button-primary" type="submit" value="Show all parts">
