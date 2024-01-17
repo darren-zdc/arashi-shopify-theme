@@ -6,6 +6,23 @@
     <!-- Create Make dropdown -->
     <label for="make">Make:</label>
     <select name="make" id="make">
+      <option values="Aprilia">Aprilia</option>
+      <option values="Benelli">Benelli</option>
+      <option values="Bimota">Bimota</option>
+      <option values="BMW">BMW</option>
+      <option values="Ducati">Ducati</option>
+      <option values="Gas gas">Gas gas</option>
+      <option values="Harley Davidson">Harley Davidson</option>
+      <option values="Honda">Honda</option>
+      <option values="Husaberg">Husaberg</option>
+      <option values="Husqvarna">Husqvarna</option>
+      <option values="Kawasaki">Kawasaki</option>
+      <option values="KTM">KTM</option>
+      <option values="Laverda Kymco">Laverda Kymco</option>
+      <option values="Moto Guzzi">Honda</option>
+      <option values="Suzuki">Suzuki</option>
+      <option values="Triumph">Triumph</option>
+      <option values="Yamaha">Yamaha</option>
       {% for vehicle in vehicles.values %}
         <option value="{{ vehicle.make }}">{{ vehicle.make }}</option>
       {% endfor %}
