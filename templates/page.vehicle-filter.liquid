@@ -56,8 +56,8 @@
 
       makeSelect.onchange = function() {
           // Clear previous options
-          yearSelect.innerHTML = '';
-          modelSelect.innerHTML = '';
+          yearSelect.innerHTML = '<option value="">Select Year</option>';
+          modelSelect.innerHTML = '<option value="">Select Model</option>';
 
           var selectedMake = makeSelect.value;
           var years = [];
