@@ -3641,7 +3641,7 @@ details-disclosure > details {
 @media (max-width: 768px) {
   .vehicle-filter-form select,
   .vehicle-filter-form input[type="submit"] {
-    /* width: 100%; */
-    padding: 0.4rem;
+    /* width: 100%; 
+    padding: 0.4rem; */
   }
 }
