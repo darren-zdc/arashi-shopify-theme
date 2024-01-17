@@ -1,7 +1,7 @@
 <div class="vehicle-filter-form">
   <form action="/search" method="get" id="vehicle-filter-form">
     <!-- Access vehicle metafields -->
-    {% assign vehicles = shop.metaobjects.vehicle %}
+    {% assign vehicles = shop.metaobjects.vehicle.values %}
 
     <!-- Create Make dropdown -->
     <label for="make">Make:</label>
