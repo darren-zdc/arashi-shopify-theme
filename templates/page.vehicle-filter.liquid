@@ -68,9 +68,9 @@
                   years.push(vehicle.year);
               }
           });
-
+          sorted_years = years | sort | reverse
           // Populate year dropdown
-          years.forEach(function(year) {
+          sorted_years.forEach(function(year) {
               var option = document.createElement('option');
               option.value = year;
               option.textContent = year;
