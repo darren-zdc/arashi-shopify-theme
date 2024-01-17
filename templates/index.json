@@ -73,6 +73,46 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
+    "collection_list_fwH9MP": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_ncUFjn": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "brake-disc"
+          }
+        },
+        "featured_collection_fRY4YX": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "rearsets"
+          }
+        },
+        "featured_collection_wHtg9G": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "wheels"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_ncUFjn",
+        "featured_collection_fRY4YX",
+        "featured_collection_wHtg9G"
+      ],
+      "settings": {
+        "title": "Collections",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -216,6 +256,7 @@
   },
   "order": [
     "slideshow_jMGwj7",
+    "collection_list_fwH9MP",
     "featured_collection",
     "multirow_iBEwNz",
     "video_D8Raqi",
