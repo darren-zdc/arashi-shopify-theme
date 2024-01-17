@@ -1,21 +1,13 @@
 <div class="vehicle-filter-form">
-  <form action="/search" method="get"  id="vehicle-filter-form">
+  <form action="/search" method="get" id="vehicle-filter-form">
     <!-- Access vehicle metafields -->
     {% assign vehicles = shop.metaobjects.vehicle %}
 
-    <!-- Create Type dropdown -->
-    <label for="type">Type:</label>
-    <select name="type" id="type">
-      {% for type in vehicleMeta.type %}
-        <option value="{{ type }}">{{ type }}</option>
-      {% endfor %}
-    </select>
-    
     <!-- Create Make dropdown -->
     <label for="make">Make:</label>
     <select name="make" id="make">
       {% for vehicle in vehicles.values %}
-        <option value="{{ make }}">{{ vehicle.make }}</option>
+        <option value="{{ vehicle.make }}">{{ vehicle.make }}</option>
       {% endfor %}
     </select>
 
@@ -23,7 +15,7 @@
     <label for="year">Year:</label>
     <select name="year" id="year">
       {% for vehicle in vehicles.values %}
-        <option value="{{ year }}">{{ vehicle.year }}</option>
+        <option value="{{ vehicle.year }}">{{ vehicle.year }}</option>
       {% endfor %}
     </select>
 
@@ -31,10 +23,74 @@
     <label for="model">Model:</label>
     <select name="model" id="model">
       {% for vehicle in vehicles.values %}
-        <option value="{{ model }}">{{ vehicle.model }}</option>
+        <option value="{{ vehicle.model }}">{{ vehicle.model }}</option>
       {% endfor %}
     </select>
 
     <input class="button button-primary" type="submit" value="Show all parts">
   </form>
 </div>
+
+<script type="application/javascript">
+  // Store the vehicle data for use in JavaScript
+  var vehiclesData = {{ vehicles | json }};
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+      var makeSelect = document.getElementById('make');
+      var yearSelect = document.getElementById('year');
+      var modelSelect = document.getElementById('model');
+
+      makeSelect.onchange = function() {
+          // Clear previous options
+          yearSelect.innerHTML = '<option value="">Select Year</option>';
+          modelSelect.innerHTML = '<option value="">Select Model</option>';
+
+          var selectedMake = makeSelect.value;
+          var years = [];
+
+          // Filter vehiclesData to get unique years for the selected make
+          vehiclesData.forEach(function(vehicle) {
+              if (vehicle.make === selectedMake && !years.includes(vehicle.year)) {
+                  years.push(vehicle.year);
+              }
+          });
+
+          // Populate year dropdown
+          years.forEach(function(year) {
+              var option = document.createElement('option');
+              option.value = year;
+              option.textContent = year;
+              yearSelect.appendChild(option);
+          });
+
+          yearSelect.disabled = false;
+      };
+
+      yearSelect.onchange = function() {
+          // Clear previous options
+          modelSelect.innerHTML = '<option value="">Select Model</option>';
+
+          var selectedYear = yearSelect.value;
+          var models = [];
+
+          // Filter vehiclesData to get models for the selected make and year
+          vehiclesData.forEach(function(vehicle) {
+              if (vehicle.make === makeSelect.value && vehicle.year === selectedYear && !models.includes(vehicle.model)) {
+                  models.push(vehicle.model);
+              }
+          });
+
+          // Populate model dropdown
+          models.forEach(function(model) {
+              var option = document.createElement('option');
+              option.value = model;
+              option.textContent = model;
+              modelSelect.appendChild(option);
+          });
+
+          modelSelect.disabled = false;
+      };
+  });
+</script>
