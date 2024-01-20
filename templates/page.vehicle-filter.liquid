@@ -7,40 +7,9 @@
     <label for="make">Make:</label>
     <select name="make" id="make">
       <option value="">Select Make</option>
-      <option values="Aprilia">Aprilia</option>
-      <option values="Benelli">Benelli</option>
-      <option values="Bimota">Bimota</option>
-      <option values="BMW">BMW</option>
-      <option values="Cagiva">Cagiva</option>
-      <option values="CCM">CCM</option>
-      <option values="Daelim">Daelim</option>
-      <option values="Ducati">Ducati</option>
-      <option values="Fantic">Fantic</option>
-      <option values="Gas Gas">Gas Gas</option>
-      <option values="Gilera">Gilera</option>
-      <option values="Harley Davidson">Harley Davidson</option>
-      <option values="Hero">Hero</option>
-      <option values="Honda">Honda</option>
-      <option values="Husaberg">Husaberg</option>
-      <option values="Husqvarna">Husqvarna</option>
-      <option values="Hyosung">Hyosung</option>
-      <option values="Indian">Indian</option>
-      <option values="Italjet">Italjet</option>
-      <option values="Kawasaki">Kawasaki</option>
-      <option values="KTM">KTM</option>
-      <option values="Laverda Kymco">Laverda Kymco</option>
-      <option values="MBK">MBK</option>
-      <option values="Moto Guzzi">Moto Guzzi</option>
-      <option values="Morini">Morini</option>
-      <option values="MZ">MZ</option>
-      <option values="Peugeot">Peugeot</option>
-      <option values="VOR">VOR</option>
-      <option values="Voxan">Voxan</option>
-      <option values="Suzuki">Suzuki</option>
-      <option values="SYM">SYM</option>
-      <option values="Tm-racing">Tm-racing</option>
-      <option values="Triumph">Triumph</option>
-      <option values="Yamaha">Yamaha</option>
+      {% for vehicleYear in vehicleYears %}
+        <option values="{{ vehicleYear.make.value }}">{{ vehicleYear.make.value }}</option>
+      {% endfor %}
     </select>
 
     <!-- Year Dropdown -->
