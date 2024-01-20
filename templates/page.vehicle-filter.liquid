@@ -47,9 +47,6 @@
           modelSelect.innerHTML = '<option value="">Select Model</option>';
 
           var selectedMake = makeSelect.value;
-          var years = [];
-
-
           var selectedVehicleYear = vehicleYearsData.find(v => v.make == selectedMake);
           var startYear = parseInt(selectedVehicleYear.min_year);
           var endYear = parseInt(selectedVehicleYear.max_year);
