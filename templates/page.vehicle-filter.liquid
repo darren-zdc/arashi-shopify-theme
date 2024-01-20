@@ -1,7 +1,7 @@
 <div class="vehicle-filter-form">
   <form action="/search" method="get" id="vehicle-filter-form">
     <!-- Access vehicle metafields -->
-    {% assign vehicles = shop.metaobjects.vehicle.values %}
+    {% assign vehicleYears = shop.metaobjects.vehicle_years.values %}
 
     <!-- Create Make dropdown -->
     <label for="make">Make:</label>
@@ -63,7 +63,7 @@
 
 <script type="application/javascript">
   // Store the vehicle data for use in JavaScript
-  var vehiclesData = {{ vehicles | json }};
+  var vehicleYearsData = {{ vehicleYears | json }};
 </script>
 
 <script>
@@ -80,21 +80,18 @@
           var selectedMake = makeSelect.value;
           var years = [];
 
-          // Filter vehiclesData to get unique years for the selected make
-          vehiclesData.forEach(function(vehicle) {
-              if (vehicle.make === selectedMake && !years.includes(vehicle.year)) {
-                  years.push(vehicle.year);
-              }
-          });
-          years.sort((a, b) => parseInt(b) - parseInt(a));
-          // Populate year dropdown
-          years.forEach(function(year) {
-              var option = document.createElement('option');
-              option.value = year;
-              option.textContent = year;
-              yearSelect.appendChild(option);
-          });
 
+          var selectedVehicleYear = vehicleYearsData.find(v => v.make == selectedMake);
+          var startYear = parseInt(selectedVehicleYear.min_year);
+          var endYear = parseInt(selectedVehicleYear.max_year);
+
+          for(var i=startYear; i<=endYear; i++) {
+            var option = document.createElement('option');
+              option.value = i;
+              option.textContent = i;
+              yearSelect.appendChild(option);
+          }
+        
           yearSelect.disabled = false;
       };
 
@@ -106,6 +103,7 @@
           var models = [];
 
           // Filter vehiclesData to get models for the selected make and year
+          /*
           vehiclesData.forEach(function(vehicle) {
               if (vehicle.make === makeSelect.value && vehicle.year === selectedYear && !models.includes(vehicle.model)) {
                   models.push(vehicle.model);
@@ -119,7 +117,7 @@
               option.textContent = model;
               modelSelect.appendChild(option);
           });
-
+          */
           modelSelect.disabled = false;
       };
   });
@@ -135,6 +133,4 @@
     var filterUrl = `${baseUrl}?sort_by=best-selling&filter.p.m.custom.make=${make}&filter.p.m.custom.year2=${year}&filter.p.m.custom.model=${model}`;
     window.location.href = filterUrl;
 });
-
-  
 </script>
