@@ -68,7 +68,7 @@
           var selectedMake = makeSelect.value;
           var selectedYear = yearSelect.value;
           var models = [];
-{% assign vehicleMakeYears = shop.metaobjects.vehicle.values | display_name: selectedMake + " " + seletedYear%}        
+{% assign vehicleMakeYears = shop.metaobjects.vehicle.values | display_name: selectedMake + " " + seletedYear %}        
 {% paginate vehicleMakeYears by 50 %}
   {% for vehicle in vehicleMakeYears %}
     var option = document.createElement('option');
