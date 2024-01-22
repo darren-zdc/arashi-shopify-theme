@@ -109,6 +109,8 @@
             var vehiclesData =  await response.json();
             // Handle the response
             console.log(vehiclesData);
+            console.log(vehiclesData.metaobjects);
+            console.log(vehiclesData.metaobjects.edges);
             vehiclesData.metaobjects.edges.forEach(function(node) {
               if (node.fields.lengths != 2) 
                 return;
