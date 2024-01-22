@@ -70,18 +70,11 @@
           var models = [];
 {% assign vehicleMakeYears = shop.metaobjects.vehicle.values | display_name: selectedMake + " " + seletedYear%}        
 {% paginate vehicleMakeYears by 50 %}
-  {% for vehicle in shop.metaobjects.vehicle.values %}
+  {% for vehicle in vehicleMakeYears %}
     var option = document.createElement('option');
-              option.value = model;
-              option.textContent = model;
+              option.value = vehicle.model;
+              option.textContent = vehicle.model;
               modelSelect.appendChild(option);
-    specialLocations[{{ forloop.index0 }}] = {
-      "name" :  "{{location.name}}",
-      "address" :  "{{location.address}}",
-      "city" :  "{{location.city}}",
-      "state" :  "{{location.state}}",
-      "postal_code" :  "{{location.postal_code}}",
-      "country" :  "{{location.country}}"
     }
   {% endfor %}
 {% endpaginate %}
