@@ -79,8 +79,8 @@
 
           {% assign result = query | shopify %}
           var option = document.createElement('option');
-              option.value = {{ result.data.shop.name }};
-              option.textContent = {{ result.data.shop.name }};
+              option.value = {{ result.data.shop.name }}
+              option.textContent = {{ result.data.shop.name }}
               modelSelect.appendChild(option);
         
           // Filter vehiclesData to get models for the selected make and year
