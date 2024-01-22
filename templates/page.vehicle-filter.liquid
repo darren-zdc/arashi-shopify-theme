@@ -82,7 +82,7 @@
             const graphqlQuery = {
               query: `
                 query vehicleStorefront {
-                  metaobjects(type: "${selectedMake.toLowerCase()}", first: 250, after: "${cursor}") {
+                  metaobjects(type: "${selectedMake.toLowerCase()}", first: 250, after: "${cursor | json }") {
                     edges {
                       node {
                         fields {
