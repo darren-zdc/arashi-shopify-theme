@@ -69,19 +69,30 @@
           var selectedYear = yearSelect.value;
           var models = [];
 
-          {% capture query %}
-            query {
-              shop {
-                name
+          // Load the access token as per instructions above
+          const storefrontAccessToken = '60fde3f3f485c944e443082b95c06f22';
+          // Shop from which we're fetching data
+          const shop = 'arashi-motorcycle.myshopify.com';
+          // StorefrontClient takes in the shop url and the Storefront Access Token for that shop.
+          const storefrontClient = new shopify.clients.Storefront({
+            domain: shop,
+            storefrontAccessToken,
+          });
+          // Use client.query and pass your query as `data`
+          const products = await storefrontClient.query({
+            data: `query vehicleStorefront {
+              metaobjects(type: "vehicle", first: 150, query) {
+                edges {
+                  node {
+                    fields {
+                      key
+                      value
+                    }
+                  }
+                }
               }
-            }
-          {% endcapture %}
-
-          {% assign result = query  %}
-          var option = document.createElement('option');
-              option.value = {{ result.data.shop.name }}
-              option.textContent = {{ result.data.shop.name }}
-              modelSelect.appendChild(option);
+            }`,
+          });
         
           // Filter vehiclesData to get models for the selected make and year
           /*
