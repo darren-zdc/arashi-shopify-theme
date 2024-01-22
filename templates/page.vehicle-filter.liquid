@@ -78,21 +78,32 @@
             domain: shop,
             storefrontAccessToken,
           });
-          // Use client.query and pass your query as `data`
-          const products = await storefrontClient.query({
-            data: `query vehicleStorefront {
-              metaobjects(type: "${selectedMake.toLowerCase()}", first: 250, query) {
-                edges {
-                  node {
-                    fields {
-                      key
-                      value
+  
+          var cursor = null;
+
+          for (let i=0; i<= 20; i++) {
+            const vehicles = await storefrontClient.query({
+              data: `query vehicleStorefront {
+                metaobjects(type: "${selectedMake.toLowerCase()}", first: 250) {
+                  edges {
+                    node {
+                      fields {
+                        key
+                        value
+                      }
                     }
+                    cursor
+                  }
+                  pageInfo {
+                    hasNextPage
                   }
                 }
-              }
-            }`,
-          });
+              }`,
+            });
+            
+            var vehiclesData = {{ vehicles | json }};
+          }
+          
         
           // Filter vehiclesData to get models for the selected make and year
           /*
