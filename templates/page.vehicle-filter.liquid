@@ -114,7 +114,7 @@
             vehiclesData.data.metaobjects.edges.forEach(function(node) {
               console.log(node);
               console.log(node.fields);
-              if (node.fields !== undefined) 
+              if (node.fields === undefined) 
                 return;
               let model =  node.fields[0].value;
               let year =  node.fields[1].value;
