@@ -106,26 +106,28 @@
               },
               body: JSON.stringify(graphqlQuery)
             })
-            
-            const vehicles = await storefrontClient.query({
-              data: ``,
-            });
-            
-            var vehiclesData = vehicles | json ;
-            vehiclesData.forEach(function(vehicle) {
-              if (vehicle.year === selectedYear && !models.includes(vehicle.model)) {
-                  models.push(vehicle.model);
+            .then(response => response.json())
+            .then(vehiclesData => {
+              // Handle the response
+              console.log(vehiclesData);
+              vehiclesData.forEach(function(vehicle) {
+                if (vehicle.year === selectedYear && !models.includes(vehicle.model)) {
+                    models.push(vehicle.model);
+                }
+              });
+              if (vehiclesData.data.metaobjects.pageInfo.hasNextPage) {
+                cursor = vehiclesData.data.metaobjects.pageInfo.endCursor;
               }
+              else {
+                break;
+              }
+            })
+            .catch(error => {
+              // Handle any errors
+              console.error('Error fetching data: ', error);
             });
-            if (vehiclesData.data.metaobjects.pageInfo.hasNextPage) {
-              cursor = vehiclesData.data.metaobjects.pageInfo.endCursor;
-            }
-            else {
-              break;
-            }
+            
           }
-          
-
           // Populate model dropdown
           models.forEach(function(model) {
               var option = document.createElement('option');
