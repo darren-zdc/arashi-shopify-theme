@@ -64,10 +64,28 @@
       yearSelect.onchange = function() {
           // Clear previous options
           modelSelect.innerHTML = '<option value="">Select Model</option>';
-
+        
+          var selectedMake = makeSelect.value;
           var selectedYear = yearSelect.value;
           var models = [];
-
+{% assign vehicleMakeYears = shop.metaobjects.vehicle.values | display_name: selectedMake + " " + seletedYear%}        
+{% paginate vehicleMakeYears by 50 %}
+  {% for vehicle in shop.metaobjects.vehicle.values %}
+    var option = document.createElement('option');
+              option.value = model;
+              option.textContent = model;
+              modelSelect.appendChild(option);
+    specialLocations[{{ forloop.index0 }}] = {
+      "name" :  "{{location.name}}",
+      "address" :  "{{location.address}}",
+      "city" :  "{{location.city}}",
+      "state" :  "{{location.state}}",
+      "postal_code" :  "{{location.postal_code}}",
+      "country" :  "{{location.country}}"
+    }
+  {% endfor %}
+{% endpaginate %}
+        
           // Filter vehiclesData to get models for the selected make and year
           /*
           vehiclesData.forEach(function(vehicle) {
