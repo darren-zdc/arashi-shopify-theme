@@ -111,20 +111,12 @@
             console.log(vehiclesData);
             console.log(vehiclesData.data.metaobjects);
             console.log(vehiclesData.data.metaobjects.edges);
-            vehiclesData.data.metaobjects.edges.forEach(function(node) {
-              console.log(node);
-              if (node.fields) {
-                node.fields.forEach(field => {
-                  console.log(`Key: ${field.key}, Value: ${field.value}`);
-                });
-              } else {
-                console.log('fields is undefined');
-              }
-              
-              if (!node.fields) 
+            vehiclesData.data.metaobjects.edges.forEach(function(edge) {
+              let fields = edge.node;
+              if (!fields) 
                 return;
-              let model =  node.fields[0].value;
-              let year =  node.fields[1].value;
+              let model =  fields[0].value;
+              let year =  fields[1].value;
               if (year === selectedYear && !models.includes(model)) {
                   models.push(vehicle.model);
               }
