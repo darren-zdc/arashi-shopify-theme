@@ -36,6 +36,7 @@
 </script>
 
 <script>
+  const max_iterations = 20;
   document.addEventListener("DOMContentLoaded", function() {
       var makeSelect = document.getElementById('make');
       var yearSelect = document.getElementById('year');
@@ -81,10 +82,10 @@
   
           var cursor = null;
 
-          for (let i=0; i<= 20; i++) {
+          for (let i=0; i<= max_iterations; i++) {
             const vehicles = await storefrontClient.query({
               data: `query vehicleStorefront {
-                metaobjects(type: "${selectedMake.toLowerCase()}", first: 250) {
+                metaobjects(type: "${selectedMake.toLowerCase()}", first: 250, after: "${cursor}") {
                   edges {
                     node {
                       fields {
@@ -92,26 +93,29 @@
                         value
                       }
                     }
-                    cursor
                   }
                   pageInfo {
                     hasNextPage
+                    endCursor
                   }
                 }
               }`,
             });
             
-            var vehiclesData = {{ vehicles | json }};
-          }
-          
-        
-          // Filter vehiclesData to get models for the selected make and year
-          /*
-          vehiclesData.forEach(function(vehicle) {
-              if (vehicle.make === makeSelect.value && vehicle.year === selectedYear && !models.includes(vehicle.model)) {
+            var vehiclesData = vehicles | json ;
+            vehiclesData.forEach(function(vehicle) {
+              if (vehicle.year === selectedYear && !models.includes(vehicle.model)) {
                   models.push(vehicle.model);
               }
-          });
+            });
+            if (vehiclesData.data.metaobjects.pageInfo.hasNextPage) {
+              cursor = vehiclesData.data.metaobjects.pageInfo.endCursor;
+            }
+            else {
+              break;
+            }
+          }
+          
 
           // Populate model dropdown
           models.forEach(function(model) {
@@ -120,7 +124,7 @@
               option.textContent = model;
               modelSelect.appendChild(option);
           });
-          */
+          
           modelSelect.disabled = false;
       };
   });
