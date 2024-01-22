@@ -68,16 +68,16 @@
           var selectedMake = makeSelect.value;
           var selectedYear = yearSelect.value;
           var models = [];
-{% assign vehicleMakeYears = shop.metaobjects.vehicle.values | display_name: selectedMake + " " + seletedYear %}        
-{% paginate vehicleMakeYears by 50 %}
-  {% for vehicle in vehicleMakeYears %}
-    var option = document.createElement('option');
-              option.value = vehicle.model;
-              option.textContent = vehicle.model;
-              modelSelect.appendChild(option);
-    }
-  {% endfor %}
-{% endpaginate %}
+          {% assign vehicleMakeYears = shop.metaobjects.vehicle.values | display_name: selectedMake + " " + seletedYear %}        
+          {% paginate vehicleMakeYears by 50 %}
+            {% for vehicle in vehicleMakeYears %}
+              var option = document.createElement('option');
+                        option.value = vehicle.model;
+                        option.textContent = vehicle.model;
+                        modelSelect.appendChild(option);
+              }
+            {% endfor %}
+          {% endpaginate %}
         
           // Filter vehiclesData to get models for the selected make and year
           /*
