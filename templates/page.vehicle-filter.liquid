@@ -98,7 +98,7 @@
                   }
                 }`
             };
-            fetch(shop, {
+            const response = await fetch(shop, {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -106,22 +106,20 @@
               },
               body: JSON.stringify(graphqlQuery)
             })
-            .then(response => response.json())
-            .then(vehiclesData => {
-              // Handle the response
-              console.log(vehiclesData);
-              vehiclesData.forEach(function(vehicle) {
-                if (vehicle.year === selectedYear && !models.includes(vehicle.model)) {
-                    models.push(vehicle.model);
-                }
-              });
-              if (vehiclesData.data.metaobjects.pageInfo.hasNextPage) {
-                cursor = vehiclesData.data.metaobjects.pageInfo.endCursor;
+            var vehiclesData =  await response.json();
+            // Handle the response
+            console.log(vehiclesData);
+            vehiclesData.forEach(function(vehicle) {
+              if (vehicle.year === selectedYear && !models.includes(vehicle.model)) {
+                  models.push(vehicle.model);
               }
-              else {
-                break;
-              }
-            })
+            });
+            if (vehiclesData.data.metaobjects.pageInfo.hasNextPage) {
+              cursor = vehiclesData.data.metaobjects.pageInfo.endCursor;
+            }
+            else {
+              break;
+            }
             .catch(error => {
               // Handle any errors
               console.error('Error fetching data: ', error);
