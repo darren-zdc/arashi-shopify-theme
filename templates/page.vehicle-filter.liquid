@@ -72,10 +72,10 @@
           {% paginate vehicleMakeYears by 50 %}
             {% for vehicle in vehicleMakeYears %}
               var option = document.createElement('option');
-                        option.value = vehicle.model;
-                        option.textContent = vehicle.model;
-                        modelSelect.appendChild(option);
-              }
+              option.value = vehicle.model;
+              option.textContent = vehicle.model;
+              modelSelect.appendChild(option);
+              
             {% endfor %}
           {% endpaginate %}
         
