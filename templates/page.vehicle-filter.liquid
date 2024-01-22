@@ -109,8 +109,12 @@
             var vehiclesData =  await response.json();
             // Handle the response
             console.log(vehiclesData);
-            vehiclesData.forEach(function(vehicle) {
-              if (vehicle.year === selectedYear && !models.includes(vehicle.model)) {
+            vehiclesData.metaobjects.edges.forEach(function(node) {
+              if (node.fields.lengths != 2) 
+                continue;
+              let model =  node.fields[0].value;
+              let year =  node.fields[1].value;
+              if (year === selectedYear && !models.includes(model)) {
                   models.push(vehicle.model);
               }
             });
