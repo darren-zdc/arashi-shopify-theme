@@ -111,7 +111,7 @@
             console.log(vehiclesData);
             vehiclesData.metaobjects.edges.forEach(function(node) {
               if (node.fields.lengths != 2) 
-                continue;
+                return;
               let model =  node.fields[0].value;
               let year =  node.fields[1].value;
               if (year === selectedYear && !models.includes(model)) {
