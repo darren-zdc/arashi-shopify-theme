@@ -77,7 +77,7 @@
             }
           {% endcapture %}
 
-          {% assign result = query | shopify %}
+          {% assign result = query  %}
           var option = document.createElement('option');
               option.value = {{ result.data.shop.name }}
               option.textContent = {{ result.data.shop.name }}
