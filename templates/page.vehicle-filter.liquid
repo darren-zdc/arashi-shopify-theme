@@ -81,7 +81,7 @@
           // Use client.query and pass your query as `data`
           const products = await storefrontClient.query({
             data: `query vehicleStorefront {
-              metaobjects(type: "vehicle", first: 150, query) {
+              metaobjects(type: "${selectedMake.toLowerCase()}", first: 250, query) {
                 edges {
                   node {
                     fields {
