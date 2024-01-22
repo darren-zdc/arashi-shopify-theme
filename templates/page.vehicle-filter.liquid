@@ -113,6 +113,8 @@
             console.log(vehiclesData.data.metaobjects.edges);
             vehiclesData.data.metaobjects.edges.forEach(function(edge) {
               let fields = edge.node;
+              
+              console.log(fields.length);
               if (fields.length == 0) 
                 return;
               console.log(fields);
