@@ -118,7 +118,7 @@
               let model =  fields[0].value;
               let year =  fields[1].value;
               if (year === selectedYear && !models.includes(model)) {
-                  models.push(vehicle.model);
+                  models.push(model);
               }
             });
             if (vehiclesData.data.metaobjects.pageInfo.hasNextPage) {
