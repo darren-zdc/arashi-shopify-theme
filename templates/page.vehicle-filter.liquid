@@ -115,6 +115,7 @@
               let fields = edge.node;
               if (!fields) 
                 return;
+              console.log(fields);
               let model =  fields[0].value;
               let year =  fields[1].value;
               if (year === selectedYear && !models.includes(model)) {
