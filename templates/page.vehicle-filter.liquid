@@ -108,17 +108,10 @@
             })
             var vehiclesData =  await response.json();
             // Handle the response
-            console.log(vehiclesData);
-            console.log(vehiclesData.data.metaobjects);
-            console.log(vehiclesData.data.metaobjects.edges);
             vehiclesData.data.metaobjects.edges.forEach(function(edge) {
               let fields = edge.node.fields;
-              console.log(edge);
-              console.log(edge.node);
-              console.log(edge.node.fields);
               if (fields.length == 0) 
                 return;
-              console.log(fields);
               let model =  fields[0].value;
               let year =  fields[1].value;
               if (year === selectedYear && !models.includes(model)) {
