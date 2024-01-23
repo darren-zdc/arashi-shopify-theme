@@ -77,12 +77,16 @@
           // StorefrontClient takes in the shop url and the Storefront Access Token for that shop.
           
           var cursor = null;
-
+          const makeToType = function(make) {
+            if (make == "MZ")
+              return "m_z";
+            else return make.toLowerCase().replace(" ", "_").replace("-", "_");
+          };
           for (let i=0; i<= max_iterations; i++) {
             const graphqlQuery = {
               query: `
                 query vehicleStorefront {
-                  metaobjects(type: "${selectedMake.toLowerCase()}", first: 250 ${cursor == null ? "" : ",after:\"" + cursor + "\"" }) {
+                  metaobjects(type: "${makeToType(selectedMake)}", first: 250 ${cursor == null ? "" : ",after:\"" + cursor + "\"" }) {
                     edges {
                       node {
                         fields {
