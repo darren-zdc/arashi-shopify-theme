@@ -52,7 +52,7 @@
         "custom_liquid_6MWb4d": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<p> Test<\/p>\n{% for make in product.metafields.custom.make.value %}\n  <p>Make: {{ make }}<\/p>\n{% endfor %}\n\n{% for model in product.metafields.custom.model.value %}\n  <p>Model: {{ model }}<\/p>\n{% endfor %}\n\n{% for year in product.metafields.custom.year2.values %}\n  <p>Year: {{ year }}<\/p>\n{% endfor %}"
+            "custom_liquid": "<p> Test<\/p>\n{% for make in product.metafields.custom.make.value %}\n  <p>Make: {{ make }}<\/p>\n{% endfor %}\n\n{% for model in product.metafields.custom.model.value %}\n  <p>Model: {{ model }}<\/p>\n{% endfor %}\n\n{% for year in product.metafields.custom.year2.value %}\n  <p>Year: {{ year.value }}<\/p>\n{% endfor %}"
           }
         }
       },
