@@ -151,7 +151,7 @@
     var year = document.getElementById('year').value;
     var baseUrl = "https://arashi-motorcycle.myshopify.com/collections/all";
 
-    var filterUrl = `${baseUrl}?sort_by=best-selling&filter.p.m.custom.make=${make}&filter.p.m.custom.year2=${year}&filter.p.m.custom.model=${model}`;
+    var filterUrl = `${baseUrl}?sort_by=best-selling&filter.p.m.custom.vehicle=${make}%20${year}%20${model}`;
     window.location.href = filterUrl;
 });
 </script>
