@@ -47,7 +47,7 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Shipping \/ Customs Info",
-            "icon": "star",
+            "icon": "truck",
             "content": "<p><strong>Shipping<\/strong><\/p><p>- Orders will be mailed within 48 hours<\/p><p>- Double-layer packaging to ensure goods arrived safely<\/p><p>- Delivered by trustworthy carriers (DHL, Post Office, UPS, FedEx, etc.)<\/p><p>- Trackable shipping status provided for all orders<\/p><p><br\/> <strong>Customs \/ Duty<\/strong><\/p><p>The recipient is the importer of record and must comply with all laws and regulations of the destination. Orders shipped outside of the United States, United Kingdom, or EU countries may be subject to import taxes, customs duties and fees levied by the destination country. The recipient of an international shipment may be subject to such import taxes, customs duties and fees, which are levied once a shipment reaches the recipient's country. Additional charges for customs clearance must be fulfilled by the recipient; Amazon has no control over these charges, nor can Amazon predict what they may be.<\/p><p>Customs policies vary widely; you should contact your local customs office for more information. When customs clearance procedures are required, it can cause delays beyond our original delivery estimates.<\/p><p> <\/p><p><strong>Note:<\/strong><\/p><p>Customs offices in some countries or regions require the importer of record to provide a particular form of identification before releasing a shipment. You may be required to provide an identification number such as a Unique Identification Number, CPF, or Tax ID.<\/p><p> <\/p><p>Countries \/ regions that require an identification number include: Brazil, Chile, China, Costa Rica, Ecuador, El Salvador, Guatemala, Honduras, India, Israel, Nicaragua, Peru, Qatar, South Africa, South Korea, Taiwan, and Turkey.<\/p><p> <\/p><p><strong>Privacy Policy<\/strong><\/p><p>Arashi Official Store values the privacy of your personal data.<\/p>",
             "page": ""
           }
@@ -56,7 +56,7 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Return & Refund Policy",
-            "icon": "check_mark",
+            "icon": "return",
             "content": "<p><strong>Product Warranty 180-Days-Guarantee<\/strong><\/p><p>Anything happened to the products that purchased within 180 days, we provide technical support, exchange, and money-back return. No return or refund is accepted if buyer found a lower price or change his \/ her mind. <\/p><p>To initiate a return, contact us to request a return authorization. <\/p>",
             "page": ""
           }
