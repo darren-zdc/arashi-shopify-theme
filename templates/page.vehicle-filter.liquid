@@ -146,14 +146,14 @@
   document.getElementById('vehicle-filter-form').addEventListener('submit', function(e) {
     e.preventDefault();
 
-    var make = document.getElementById('make').value;
-    var model = document.getElementById('model').value;
+    var make = document.getElementById('make').value.replace(/ /g, '+');
+    var model = document.getElementById('model').value.replace(/ /g, '+');
     var year = document.getElementById('year').value;
     var baseUrl = "https://arashi-motorcycle.myshopify.com/collections/all";
 
-    var filterUrl = `${baseUrl}?sort_by=best-selling&filter.p.m.custom.vehicle=${make}%20${year}%20${model}
-    &filter.p.m.custom.vehicle1=${make}%20${year}%20${model}
-    &filter.p.m.custom.vehicle2=${make}%20${year}%20${model}`;
+    var filterUrl = `${baseUrl}?sort_by=best-selling&filter.p.m.custom.vehicle=${make}+${year}+${model}
+    &filter.p.m.custom.vehicle1=${make}+${year}+${model}
+    &filter.p.m.custom.vehicle2=${make}+${year}+${model}`;
     window.location.href = filterUrl;
 });
 </script>
