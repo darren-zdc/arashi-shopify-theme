@@ -11,7 +11,7 @@
     "custom_liquid_njiDRi": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div id=\"vehicle-display\"><\/div>\n\n<script type=\"application\/javascript\">\n  document.getElementById('vehicle-display').textContent = window.vehicle;\n<\/script>",
+        "custom_liquid": "<div id=\"vehicle-display\"><\/div>\n\n<script type=\"application\/javascript\">\n  document.getElementById('vehicle-display').textContent = localStorage.getItem('vehicle');;\n<\/script>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
