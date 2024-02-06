@@ -151,7 +151,7 @@
     var year = document.getElementById('year').value;
     var baseUrl = "https://arashi-motorcycle.myshopify.com/collections/all";
 
-    var vehicle = `${make} ${year} ${model}`;
+    var vehicle = make + year + model;
 
     window.vehicle = vehicle;
     var skuVehiclesUrl = "{{ 'sku-vehicles.json' | asset_url }}";
