@@ -154,7 +154,7 @@
     // var vehicle = `${make} ${year} ${model}`;
     var vehicle = make + " "+ year + " " + model;
     console.log(vehicle);
-    window.vehicle = vehicle;
+    localStorage.setItem('vehicle', vehicle);
     var skuVehiclesUrl = "{{ 'sku-vehicles.json' | asset_url }}";
     fetch(skuVehiclesUrl)
           .then(response => response.json())
@@ -163,8 +163,8 @@
             
               const skus = matchingSkus.map(product => product.SKU).join(',');
               var filterUrl = `${baseUrl}?sort_by=best-selling&filter.p.m.custom.sku=${skus}`;
-              console.log(filterUrl);
-              // window.location.href = filterUrl;
+              
+              window.location.href = filterUrl;
           })
           .catch(error => console.error('Error loading SKU vehicles data:', error));
   
