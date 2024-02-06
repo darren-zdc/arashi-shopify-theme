@@ -164,6 +164,7 @@
             
               var skusString = matchingSkus.join(',');
               var filterUrl = `${baseUrl}?sort_by=best-selling&filter.p.m.custom.sku=${skusString}`;
+              console.log(filterUrl);
               // window.location.href = filterUrl;
           })
           .catch(error => console.error('Error loading SKU vehicles data:', error));
