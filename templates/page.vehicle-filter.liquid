@@ -163,8 +163,9 @@
             
               const skus = matchingSkus.map(product => product.SKU).join(',');
               var filterUrl = `${baseUrl}?sort_by=best-selling&filter.p.m.custom.sku=${skus}`;
+              console.log(filterUrl);
               
-              window.location.href = filterUrl;
+              // window.location.href = filterUrl;
           })
           .catch(error => console.error('Error loading SKU vehicles data:', error));
   
