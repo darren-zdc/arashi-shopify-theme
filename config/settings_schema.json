@@ -1465,16 +1465,5 @@
         "default": "background-1"
       }
     ]
-  },
-  {
-    "name": "t:setting_schema.vehicle",
-    "settings": [
-      {
-        "type": "text",
-        "id": "selected_vehicle",
-        "label": "selected vehicle",
-        "default": "honda"
-      }
-    ]
   }
 ]
