@@ -1,0 +1,12 @@
+<div id="vehicle-display"></div>
+
+
+
+<script type="application/javascript">
+  const params = new URLSearchParams(window.location.search);
+  const vehicle = params.get('vehicle');
+  
+  if (vehicle) {
+        document.getElementById('vehicle-display').textContent = vehicle;
+    }
+</script>
