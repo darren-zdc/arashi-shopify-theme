@@ -152,6 +152,8 @@
     var baseUrl = "https://arashi-motorcycle.myshopify.com/collections/all";
 
     var vehicle = `${make} ${year} ${model}`;
+
+    {{ settings.selected_vehicle = vehicle }}
     var skuVehiclesUrl = "{{ 'sku-vehicles.json' | asset_url }}";
     fetch(skuVehiclesUrl)
           .then(response => response.json())
