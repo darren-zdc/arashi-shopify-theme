@@ -150,7 +150,7 @@
     var model = document.getElementById('model').value;
     var year = document.getElementById('year').value;
     var baseUrl = "https://arashi-motorcycle.myshopify.com/collections/all";
-    console.log(baseUrl);
+    
     // var vehicle = `${make} ${year} ${model}`;
     var vehicle = make + " "+ year + " " + model;
     console.log(vehicle);
@@ -160,10 +160,9 @@
           .then(response => response.json())
           .then(data => {
               const matchingSkus = data.filter(item => item.vehicle === vehicle);
-              console.log(matchingSkus); // Process your data here
             
-              var skusString = matchingSkus.join(',');
-              var filterUrl = `${baseUrl}?sort_by=best-selling&filter.p.m.custom.sku=${skusString}`;
+              const skus = matchingSkus.map(product => product.SKU).join(',');
+              var filterUrl = `${baseUrl}?sort_by=best-selling&filter.p.m.custom.sku=${skus}`;
               console.log(filterUrl);
               // window.location.href = filterUrl;
           })
