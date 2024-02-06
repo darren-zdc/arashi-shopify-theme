@@ -151,7 +151,19 @@
     var year = document.getElementById('year').value;
     var baseUrl = "https://arashi-motorcycle.myshopify.com/pages/products";
 
-    var filterUrl = `${baseUrl}?vehicle=${make}+${year}+${model}`;
-    window.location.href = filterUrl;
+    var skuVehiclesUrl = "{{ 'sku-vehicles.json' | asset_url }}";
+    fetch(skuVehiclesUrl)
+          .then(response => response.json())
+          .then(data => {
+              const matchingSkus = data.filter(item => item.vehicle === vehicleParam);
+              console.log(matchingSkus); // Process your data here
+              // You can now use 'matchingSkus' to display information or further process data
+              document.getElementById('vehicle-display').textContent = matchingSkus;
+              var skusString = matchingSkus.join(',');
+              var filterUrl = `${baseUrl}?sort_by=best-selling&filter.p.m.custom.sku=${skusString}`;
+              window.location.href = filterUrl;
+          })
+          .catch(error => console.error('Error loading SKU vehicles data:', error));
+  
 });
 </script>
