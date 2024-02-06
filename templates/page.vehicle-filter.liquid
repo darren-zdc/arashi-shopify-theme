@@ -149,9 +149,9 @@
     var make = document.getElementById('make').value.replace(/ /g, '+');
     var model = document.getElementById('model').value.replace(/ /g, '+');
     var year = document.getElementById('year').value;
-    var baseUrl = "https://arashi-motorcycle.myshopify.com/collections/all";
+    var baseUrl = "https://arashi-motorcycle.myshopify.com/pages/products";
 
-    var filterUrl = `${baseUrl}?sort_by=best-selling&filter.p.m.custom.vehicle=${make}+${year}+${model}`;
+    var filterUrl = `${baseUrl}?vehicle=${make}+${year}+${model}`;
     window.location.href = filterUrl;
 });
 </script>
