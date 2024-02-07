@@ -154,13 +154,13 @@
     // var vehicle = `${make} ${year} ${model}`;
     var vehicle = make + " "+ year + " " + model;
     console.log("\"" + vehicle + "\"");
-    localStorage.setItem('vehicle', vehicle);
+    localStorage.setItem('vehicle', vehicle.trim());
     var skuVehiclesUrl = "{{ 'sku-vehicles.json' | asset_url }}";
     fetch(skuVehiclesUrl)
           .then(response => response.json())
           .then(data => {
               console.log(data);
-              const matchingSkus = data.filter(item => item.vehicle === vehicle);
+              const matchingSkus = data.filter(item => item.vehicle === vehicle.trim());
               console.log(matchingSkus);
               const skus = matchingSkus.map(product => product.SKU).join(',');
               var filterUrl = `${baseUrl}?sort_by=best-selling&filter.p.m.custom.sku=${skus}`;
