@@ -10,6 +10,10 @@
     },
     "custom_liquid_jVjEwg": {
       "type": "custom-liquid",
+      "custom_css": [
+        "#vehicle-display {align-items: center; flex-direction: row; padding-bottom: 0; display: flex; padding: 0 5rem; max-width: 120rem; margin: 0 auto;}",
+        "@media (max-width: 768px) {#vehicle-display {padding: 10px; text-align: left; }}"
+      ],
       "settings": {
         "custom_liquid": "<div id=\"vehicle-display\">\n<\/div>\n\n<script type=\"application\/javascript\">\n\nvar newElement = document.createElement('p');\nnewElement.textContent = \"My vehicle: \" + localStorage.getItem('vehicle');\n\ndocument.getElementById('vehicle-display').appendChild(newElement);\n<\/script>",
         "color_scheme": "",
