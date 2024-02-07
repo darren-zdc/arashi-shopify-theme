@@ -17,8 +17,8 @@
       "settings": {
         "custom_liquid": "<div id=\"vehicle-display\">\n<\/div>\n\n<script type=\"application\/javascript\">\n\nvar newElement = document.createElement('p');\nnewElement.textContent = \"My vehicle: \" + localStorage.getItem('vehicle');\n\ndocument.getElementById('vehicle-display').appendChild(newElement);\n<\/script>",
         "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "product-grid": {
