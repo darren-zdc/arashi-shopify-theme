@@ -11,7 +11,7 @@
     "custom_liquid_QUrCgH": {
       "type": "custom-liquid",
       "custom_css": [
-        "#vehicle-display {background-color: #f2f2f2; \/* Light grey background *\/ border: 1px solid #ddd; \/* Grey border *\/ padding: 15px; \/* Padding inside the div *\/ margin: 10px 0; \/* Margin above and below the div *\/ text-align: center; \/* Center-align text *\/ border-radius: 8px; \/* Rounded corners *\/ font-family: Arial, sans-serif; \/* Font style *\/ color: #333; \/* Dark grey text color *\/}",
+        "#vehicle-display {align-items: center; flex-direction: row; padding-bottom: 0; display: flex; padding: 0 5rem; max-width: 120rem; margin: 0 auto;}",
         "@media (max-width: 768px) {#vehicle-display {padding: 10px; text-align: left; }}"
       ],
       "settings": {
