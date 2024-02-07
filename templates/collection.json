@@ -8,15 +8,6 @@
         "color_scheme": "background-1"
       }
     },
-    "custom_liquid_njiDRi": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<div id=\"vehicle-display\"><\/div>\n\n<script type=\"application\/javascript\">\n  document.getElementById('vehicle-display').textContent = localStorage.getItem('vehicle');;\n<\/script>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
@@ -40,7 +31,6 @@
   },
   "order": [
     "banner",
-    "custom_liquid_njiDRi",
     "product-grid"
   ]
 }
