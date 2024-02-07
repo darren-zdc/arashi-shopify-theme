@@ -159,7 +159,7 @@
           .then(response => response.json())
           .then(data => {
               const matchingSkus = data.filter(item => item.vehicle === vehicle.trim());
-              const skus = matchingSkus.map(product => product.SKU.toLower()).join(',');
+              const skus = matchingSkus.map(product => product.SKU.toLowerCase()).join(',');
               var filterUrl = `${baseUrl}?sort_by=best-selling&filter.p.m.custom.sku=${skus}`;
             
               window.location.href = filterUrl;
