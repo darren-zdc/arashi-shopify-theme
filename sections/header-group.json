@@ -29,6 +29,9 @@
     },
     "header": {
       "type": "header",
+      "custom_css": [
+        "#HeaderMenu-e-bike {font-size: 20px; font-style: bolder;}"
+      ],
       "settings": {
         "logo_position": "middle-left",
         "menu": "main-menu",
