@@ -93,8 +93,121 @@
         "padding_bottom": 36
       }
     },
+    "multirow_JzRte3": {
+      "type": "multirow",
+      "blocks": {
+        "row_gYXhcF": {
+          "type": "row",
+          "settings": {
+            "caption": "Caption",
+            "heading": "Row",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        },
+        "row_Hh9j7x": {
+          "type": "row",
+          "settings": {
+            "caption": "Caption",
+            "heading": "Row",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        },
+        "row_GUijJV": {
+          "type": "row",
+          "settings": {
+            "caption": "Caption",
+            "heading": "Row",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_gYXhcF",
+        "row_Hh9j7x",
+        "row_GUijJV"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "video_F9Bnrj": {
+      "type": "video",
+      "settings": {
+        "heading": "Video",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_BqRbiX": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_n8zx7y": {
+          "type": "heading",
+          "settings": {
+            "heading": "About Arashi E-Bike",
+            "heading_size": "h1"
+          }
+        },
+        "text_FApnLG": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Discover the Future of Urban Mobility with Arashi E-Bikes<\/h2><p>At Arashi, we've been at the forefront of motorcycling excellence, offering top-tier e-scooters and a wide range of high-quality modified accessories tailored for the modern rider. Building on our legacy in pioneering advanced, thrilling, and reliable rides, we're excited to introduce our latest venture into the world of electric mobility - Arashi E-Bikes.<\/p><p>Our new e-bike collection embodies the fusion of cutting-edge technology, sustainable urban transport, and Arashi's signature design aesthetics. Designed for the discerning urbanite, our e-bikes offer a seamless blend of style, efficiency, and performance. Whether you're navigating the bustling city streets or exploring serene suburban paths, Arashi E-Bikes provide an unmatched riding experience, ensuring you reach your destination with ease, comfort, and flair.<\/p><p><strong>Why Choose Arashi E-Bikes?<\/strong><\/p><ul><li><strong>Eco-Friendly Innovation<\/strong>: Embrace the green revolution with our electric bikes that promise zero emissions, contributing to a cleaner, more sustainable environment.<\/li><li><strong>Unparalleled Performance<\/strong>: Experience the perfect blend of power and efficiency with our state-of-the-art electric motors and battery technology, ensuring longer rides with shorter charging times.<\/li><li><strong>Customizable Experience<\/strong>: With Arashi's legacy in modified accessories, personalize your e-bike to match your style and needs, making each ride uniquely yours.<\/li><li><strong>Durability and Reliability<\/strong>: Trust in the Arashi name, synonymous with durability and reliability in the motorcycling world, now extended to our e-bike range.<\/li><li><strong>Smart Features for the Modern Rider<\/strong>: From advanced security systems to intuitive performance monitoring, our e-bikes are equipped with smart features that cater to the needs of the modern rider.<\/li><\/ul>"
+          }
+        },
+        "button_xEVWnU": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_n8zx7y",
+        "text_FApnLG",
+        "button_xEVWnU"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
@@ -104,6 +217,9 @@
   "order": [
     "slideshow_cFHDtt",
     "collection_list_fr7wBJ",
+    "multirow_JzRte3",
+    "video_F9Bnrj",
+    "rich_text_BqRbiX",
     "main"
   ]
 }
