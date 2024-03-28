@@ -30,7 +30,8 @@
     "header": {
       "type": "header",
       "custom_css": [
-        "#HeaderMenu-to-e-bike {font-size: xx-large; color: #4caf50; padding: 0; margin-left: 20px; font-family: cursive;}"
+        "#HeaderMenu-to-e-bike {font-size: xx-large; color: #4caf50; padding: 0; margin-left: 20px; font-family: cursive;}",
+        "#HeaderDrawer-to-e-bike {font-size: xx-large; color: #4caf50; padding: 0; margin-left: 20px; font-family: cursive;}"
       ],
       "settings": {
         "logo_position": "middle-left",
