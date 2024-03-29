@@ -31,7 +31,8 @@
         "button_A4YaHL"
       ],
       "custom_css": [
-        ".rich-text__blocks {display: flex; align-items: center; height: 4rem; margin-top: 0;}"
+        ".rich-text__blocks {display: flex;}",
+        ".rich-text__buttons {align-items: center; height: 4rem; margin-top: 0;}"
       ],
       "settings": {
         "desktop_content_position": "center",
