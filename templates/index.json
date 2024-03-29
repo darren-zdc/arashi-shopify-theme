@@ -3,17 +3,6 @@
     "rich_text_MWFJGX": {
       "type": "rich-text",
       "blocks": {
-        "button_GFyEFi": {
-          "type": "button",
-          "settings": {
-            "button_label": "Visit Arashi E-Bike",
-            "button_link": "shopify:\/\/pages\/e-bike",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "shopify:\/\/pages\/shop-by-vehicle",
-            "button_style_secondary_2": false
-          }
-        },
         "button_A4YaHL": {
           "type": "button",
           "settings": {
@@ -24,11 +13,22 @@
             "button_link_2": "",
             "button_style_secondary_2": false
           }
+        },
+        "button_GFyEFi": {
+          "type": "button",
+          "settings": {
+            "button_label": "Visit Arashi E-Bike",
+            "button_link": "shopify:\/\/pages\/e-bike",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "shopify:\/\/pages\/shop-by-vehicle",
+            "button_style_secondary_2": false
+          }
         }
       },
       "block_order": [
-        "button_GFyEFi",
-        "button_A4YaHL"
+        "button_A4YaHL",
+        "button_GFyEFi"
       ],
       "custom_css": [
         ".rich-text__blocks {display: flex;}",
