@@ -30,6 +30,9 @@
         "button_GFyEFi",
         "button_RFTexN"
       ],
+      "custom_css": [
+        ".rich-text__blocks {flex-direction: row; display: flex;}"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
