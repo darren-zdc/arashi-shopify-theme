@@ -291,6 +291,14 @@
       {%- render 'cart-drawer' -%}
     {%- endif -%}
 
+
+    {% if template.name == 'index' %}
+      {% section 'header' %}
+    {% else %}
+      {% sections 'header-group' %}
+    {% endif %}
+
+    
     {% sections 'header-group' %}
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
