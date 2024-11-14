@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "banner": {
@@ -10,12 +19,13 @@
     },
     "custom_liquid_jVjEwg": {
       "type": "custom-liquid",
+      "disabled": true,
       "custom_css": [
         "#vehicle-display {align-items: center; flex-direction: row; padding-bottom: 0; display: flex; padding: 0 5rem; max-width: 120rem; margin: 0 auto;}",
         "@media (max-width: 768px) {#vehicle-display {padding: 10px; text-align: left; }}"
       ],
       "settings": {
-        "custom_liquid": "<div id=\"vehicle-display\">\n<\/div>\n\n<script type=\"application\/javascript\">\n\nvar newElement = document.createElement('p');\nnewElement.textContent = \"Search result for: \" + localStorage.getItem('vehicle');\n\ndocument.getElementById('vehicle-display').appendChild(newElement);\n<\/script>",
+        "custom_liquid": "<div id=\"vehicle-display\">\n</div>\n\n<script type=\"application/javascript\">\n\nvar newElement = document.createElement('p');\nnewElement.textContent = \"Search result for: \" + localStorage.getItem('vehicle');\n\ndocument.getElementById('vehicle-display').appendChild(newElement);\n</script>",
         "color_scheme": "",
         "padding_top": 12,
         "padding_bottom": 12
