@@ -103,7 +103,7 @@
           "settings": {
             "button_label": "SHOP NOW",
             "button_link": "shopify://products/mailing-918-scooter",
-            "button_style_secondary": true
+            "button_style_secondary": false
           }
         }
       },
@@ -123,54 +123,6 @@
         "content_layout": "no-overlap",
         "section_color_scheme": "background-1",
         "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "image_with_text_dNmNUr": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_UMnDb9": {
-          "type": "heading",
-          "settings": {
-            "heading": "Illuminate Your Ride with Arashi Moremax",
-            "heading_size": "h2"
-          }
-        },
-        "text_qW4C33": {
-          "type": "text",
-          "settings": {
-            "text": "<p>The powerful LED headlight of the Arashi Moremax ensures maximum visibility and safety on every journey.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_gzRiTn": {
-          "type": "button",
-          "settings": {
-            "button_label": "SHOP NOW",
-            "button_link": "",
-            "button_style_secondary": true
-          }
-        }
-      },
-      "block_order": [
-        "heading_UMnDb9",
-        "text_qW4C33",
-        "button_gzRiTn"
-      ],
-      "custom_css": [],
-      "settings": {
-        "image": "shopify://shop_images/IMG_9547.jpg",
-        "height": "adapt",
-        "desktop_image_width": "large",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "background-1",
-        "color_scheme": "background-1",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 36,
@@ -362,6 +314,53 @@
         "padding_bottom": 36
       }
     },
+    "image_with_text_tjCiQr": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_cdGNqj": {
+          "type": "heading",
+          "settings": {
+            "heading": "Illuminate Your Ride with Arashi Moremax",
+            "heading_size": "h2"
+          }
+        },
+        "text_gzBKDn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Experience unmatched brightness with the Arashi Moremax LED headlight. Ride confidently, day or night.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_NFx8PL": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://products/shenyuan-ub-electric-moped",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_cdGNqj",
+        "text_gzBKDn",
+        "button_NFx8PL"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/IMG_9547.jpg",
+        "height": "adapt",
+        "desktop_image_width": "large",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "rich_text_MTfBnn": {
       "type": "rich-text",
       "blocks": {
@@ -409,11 +408,11 @@
     "featured_collection",
     "rich_text_MWFJGX",
     "image_with_text_wY9iWh",
-    "image_with_text_dNmNUr",
     "slideshow_jMGwj7",
     "collection_list_fwH9MP",
     "multirow_iBEwNz",
     "video_D8Raqi",
+    "image_with_text_tjCiQr",
     "rich_text_MTfBnn"
   ]
 }
