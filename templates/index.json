@@ -1,5 +1,42 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Discover Arashi Scooters",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
     "rich_text_MWFJGX": {
       "type": "rich-text",
       "blocks": {
@@ -7,7 +44,7 @@
           "type": "button",
           "settings": {
             "button_label": "Shop by vehicle",
-            "button_link": "shopify:\/\/pages\/shop-by-vehicle",
+            "button_link": "shopify://pages/shop-by-vehicle",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -18,10 +55,10 @@
           "type": "button",
           "settings": {
             "button_label": "Visit Arashi E-Bike",
-            "button_link": "shopify:\/\/pages\/e-bike",
+            "button_link": "shopify://pages/e-bike",
             "button_style_secondary": false,
             "button_label_2": "",
-            "button_link_2": "shopify:\/\/pages\/shop-by-vehicle",
+            "button_link_2": "shopify://pages/shop-by-vehicle",
             "button_style_secondary_2": false
           }
         }
@@ -30,6 +67,7 @@
         "button_A4YaHL",
         "button_GFyEFi"
       ],
+      "disabled": true,
       "custom_css": [
         ".rich-text__blocks {display: flex;}",
         ".rich-text__buttons {align-items: center; height: 4rem; margin-top: 0;}"
@@ -43,18 +81,114 @@
         "padding_bottom": 24
       }
     },
+    "image_with_text_wY9iWh": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_EyK737": {
+          "type": "heading",
+          "settings": {
+            "heading": "Arashi 918 Smard Display",
+            "heading_size": "h2"
+          }
+        },
+        "text_fwXwbW": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Clear, intuitive display showing speed, battery, and trip info for a connected ride.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_83dhFA": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://products/mailing-918-scooter",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_EyK737",
+        "text_fwXwbW",
+        "button_83dhFA"
+      ],
+      "custom_css": [],
+      "settings": {
+        "image": "shopify://shop_images/IMG_9426-removebg-preview.png",
+        "height": "adapt",
+        "desktop_image_width": "large",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "background-1",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_dNmNUr": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_UMnDb9": {
+          "type": "heading",
+          "settings": {
+            "heading": "Illuminate Your Ride with Arashi Moremax",
+            "heading_size": "h2"
+          }
+        },
+        "text_qW4C33": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The powerful LED headlight of the Arashi Moremax ensures maximum visibility and safety on every journey.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_gzRiTn": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP NOW",
+            "button_link": "",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_UMnDb9",
+        "text_qW4C33",
+        "button_gzRiTn"
+      ],
+      "custom_css": [],
+      "settings": {
+        "image": "shopify://shop_images/IMG_9547.jpg",
+        "height": "adapt",
+        "desktop_image_width": "large",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "background-1",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "slideshow_jMGwj7": {
       "type": "slideshow",
       "blocks": {
         "slide_y7wjka": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/IMG_9903.jpg",
+            "image": "shopify://shop_images/IMG_9903.jpg",
             "heading": "Browse our latest products",
             "heading_size": "h0",
             "subheading": "",
             "button_label": "Shop all",
-            "link": "shopify:\/\/collections\/all",
+            "link": "shopify://products/shenyuan-ub-electric-moped",
             "button_style_secondary": true,
             "box_align": "bottom-center",
             "show_text_box": false,
@@ -71,7 +205,7 @@
             "heading_size": "h0",
             "subheading": "",
             "button_label": "Shop all",
-            "link": "shopify:\/\/collections\/all",
+            "link": "shopify://collections/all",
             "button_style_secondary": true,
             "box_align": "bottom-center",
             "show_text_box": false,
@@ -104,10 +238,11 @@
         "slide_3aCNn4",
         "slide_xg9pRt"
       ],
+      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "medium",
-        "slider_visual": "counter",
+        "slider_visual": "dots",
         "auto_rotate": false,
         "change_slides_speed": 5,
         "image_behavior": "none",
@@ -142,6 +277,7 @@
         "featured_collection_fRY4YX",
         "featured_collection_wHtg9G"
       ],
+      "disabled": true,
       "settings": {
         "title": "Collections",
         "heading_size": "h1",
@@ -155,34 +291,6 @@
         "padding_bottom": 36
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 44,
-        "padding_bottom": 36
-      }
-    },
     "multirow_iBEwNz": {
       "type": "multirow",
       "blocks": {
@@ -191,9 +299,9 @@
           "settings": {
             "caption": "",
             "heading": "Brake Rotors",
-            "text": "<p>Our collection includes brake rotors made from durable and heat-resistant materials such as stainless steel, ensuring that they can withstand the high temperatures generated by friction during braking.<br\/><\/p>",
+            "text": "<p>Our collection includes brake rotors made from durable and heat-resistant materials such as stainless steel, ensuring that they can withstand the high temperatures generated by friction during braking.<br/></p>",
             "button_label": "Shop collections",
-            "button_link": "shopify:\/\/collections\/brake-disc"
+            "button_link": "shopify://collections/brake-disc"
           }
         },
         "row_XqdVB9": {
@@ -201,9 +309,9 @@
           "settings": {
             "caption": "",
             "heading": "Rearsets",
-            "text": "<p>Our rearset collection includes a variety of styles, from sporty and aggressive to comfortable and touring-oriented. We carry rearsets from top brands and manufacturers, ensuring that you can rely on their quality, durability, and performance.<\/p>",
+            "text": "<p>Our rearset collection includes a variety of styles, from sporty and aggressive to comfortable and touring-oriented. We carry rearsets from top brands and manufacturers, ensuring that you can rely on their quality, durability, and performance.</p>",
             "button_label": "Shop collections",
-            "button_link": "shopify:\/\/collections\/rearsets"
+            "button_link": "shopify://collections/rearsets"
           }
         },
         "row_xFMhbV": {
@@ -211,9 +319,9 @@
           "settings": {
             "caption": "",
             "heading": "Wheels",
-            "text": "<p>Our wheels are available in a range of finishes, including chrome, black, and polished aluminum, allowing you to choose the look that best suits your motorcycle's style. We also offer a range of sizes and widths to accommodate different tire sizes and riding styles.<\/p>",
+            "text": "<p>Our wheels are available in a range of finishes, including chrome, black, and polished aluminum, allowing you to choose the look that best suits your motorcycle's style. We also offer a range of sizes and widths to accommodate different tire sizes and riding styles.</p>",
             "button_label": "Shop collections",
-            "button_link": "shopify:\/\/collections\/wheels"
+            "button_link": "shopify://collections/wheels"
           }
         }
       },
@@ -222,6 +330,7 @@
         "row_XqdVB9",
         "row_xFMhbV"
       ],
+      "disabled": true,
       "settings": {
         "image_height": "medium",
         "desktop_image_width": "medium",
@@ -240,11 +349,12 @@
     },
     "video_D8Raqi": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "heading": "Video",
         "heading_size": "h1",
         "enable_video_looping": false,
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "description": "",
         "full_width": false,
         "color_scheme": "background-1",
@@ -265,14 +375,14 @@
         "text_LrJgwk": {
           "type": "text",
           "settings": {
-            "text": "<p>The team at Arashi Motor Modifications has a deep understanding and extensive experience in manufacturing the finest motorcycle modification parts. Most of their products are on-road tested at the prestigious Zhuhai International Race Track, ensuring that only the best components make it onto the bikes of their loyal customers.<\/p>"
+            "text": "<p>The team at Arashi Motor Modifications has a deep understanding and extensive experience in manufacturing the finest motorcycle modification parts. Most of their products are on-road tested at the prestigious Zhuhai International Race Track, ensuring that only the best components make it onto the bikes of their loyal customers.</p>"
           }
         },
         "button_VtGpUY": {
           "type": "button",
           "settings": {
             "button_label": "Learn more",
-            "button_link": "shopify:\/\/pages\/about-us",
+            "button_link": "shopify://pages/about-us",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -296,10 +406,12 @@
     }
   },
   "order": [
+    "featured_collection",
     "rich_text_MWFJGX",
+    "image_with_text_wY9iWh",
+    "image_with_text_dNmNUr",
     "slideshow_jMGwj7",
     "collection_list_fwH9MP",
-    "featured_collection",
     "multirow_iBEwNz",
     "video_D8Raqi",
     "rich_text_MTfBnn"
